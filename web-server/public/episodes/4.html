@@ -1,0 +1,149 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>The Social Media Clarity Podcast - Social Media Clarity Podcast</title>
+    <style>
+        body {
+            font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+            max-width: 800px;
+            margin: 0 auto;
+            padding: 20px;
+            line-height: 1.6;
+            color: #333;
+            background: #fff;
+        }
+        .header {
+            border-bottom: 2px solid #eee;
+            padding-bottom: 20px;
+            margin-bottom: 30px;
+        }
+        .episode-number {
+            color: #666;
+            font-size: 0.9em;
+            text-transform: uppercase;
+            letter-spacing: 1px;
+            margin-bottom: 10px;
+        }
+        .audio-player {
+            background: #f8f9fa;
+            padding: 20px;
+            border-radius: 8px;
+            margin: 30px 0;
+            border-left: 4px solid #007cba;
+        }
+        .back-link {
+            display: inline-block;
+            background: #007cba;
+            color: white;
+            padding: 10px 20px;
+            text-decoration: none;
+            border-radius: 5px;
+            margin-bottom: 20px;
+            font-weight: 500;
+        }
+        .back-link:hover {
+            background: #005a87;
+        }
+        .content {
+            font-size: 1em;
+            line-height: 1.7;
+        }
+        .content h1, .content h2, .content h3, .content h4 {
+            color: #2c3e50;
+            margin-top: 2em;
+            margin-bottom: 1em;
+        }
+        .content h2 {
+            border-bottom: 1px solid #eee;
+            padding-bottom: 0.5em;
+        }
+        .content h3 {
+            color: #007cba;
+        }
+        .content p {
+            margin-bottom: 1.2em;
+        }
+        .content ul, .content ol {
+            margin-bottom: 1.2em;
+            padding-left: 2em;
+        }
+        .content li {
+            margin-bottom: 0.5em;
+        }
+        .content a {
+            color: #007cba;
+            text-decoration: none;
+            border-bottom: 1px solid transparent;
+        }
+        .content a:hover {
+            border-bottom-color: #007cba;
+        }
+        .content pre {
+            background: #f8f8f8;
+            padding: 15px;
+            border-radius: 5px;
+            overflow-x: auto;
+            border-left: 3px solid #007cba;
+        }
+        .content blockquote {
+            border-left: 4px solid #007cba;
+            margin-left: 0;
+            padding-left: 20px;
+            color: #666;
+            font-style: italic;
+        }
+        .content strong, .content b {
+            color: #2c3e50;
+        }
+        .content em, .content i {
+            color: #555;
+        }
+        /* Preserve any existing styling for show notes, transcripts, etc. */
+        .content center {
+            text-align: center;
+            margin: 2em 0;
+        }
+        footer {
+            margin-top: 50px;
+            padding-top: 20px;
+            border-top: 1px solid #eee;
+            color: #666;
+            font-size: 0.9em;
+        }
+    </style>
+</head>
+<body>
+    <a href="/" class="back-link">← Back to All Episodes</a>
+    
+    <div class="header">
+        <div class="episode-number">Episode 4</div>
+        <h1>The Social Media Clarity Podcast</h1>
+        <p><strong>The Social Media Clarity Podcast</strong></p>
+        <p><em>15 minutes of concentrated analysis and advice about social media in platform and product design</em></p>
+    </div>
+    
+    <div class="audio-player">
+        <h3>🎧 Listen to this episode:</h3>
+        <audio controls style="width: 100%; margin-top: 10px;">
+            <source src="/podcasts/118457-influence-is-a-graph-social-media-clairty-s01e04.mp3" type="audio/mpeg">
+            Your browser does not support the audio element.
+        </audio>
+        <p style="margin-top: 10px; font-size: 0.9em; color: #666;">
+            <a href="/podcasts/118457-influence-is-a-graph-social-media-clairty-s01e04.mp3" download>Download MP3</a>
+        </p>
+    </div>
+    
+    <div class="content">
+
+<div class="copy"><p class="MsoNormal">Influence is a Graph - S01E04</p><p class="MsoNormal">This episode we talk about web influence - what is is, how you measure it, and what you can do with it.</p><p class="MsoNormal"><em><strong>— Links —</strong></em></p><p class="MsoNormal">Goel, Sharad, Ashton Anderson, Jake Hofman, and Duncan Watts. <a href="http://5harad.com/papers/twiral.pdf">“The structural virality of online diffusion.”</a></p><p class="MsoNormal"><a href="http://www.connectedaction.net/2011/03/05/how-to-build-a-collection-of-influential-followers-in-twitter-using-social-network-analysis-and-nodexl/">How to Build a Collection of Influential Followers in Twitter Using Social Network Analysis and NodeXL</a></p><p class="MsoNormal"><em><strong>— Transcription —</strong></em></p><p class="MsoNormal"><strong>Randy:&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </strong>We have a little bit of news. Bryce started a new position and won’t be with us this episode. We congratulate him.</p><p class="MsoNormal">This episode, we’re going to discuss something central to the internet:&nbsp;Influence.<br><br>For our main segment this week, we’re going to interview our co-host, Marc Smith.</p><p class="MsoNormal">Marc, what do we mean by influence?</p><p class="MsoNormal"><strong>Marc:&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </strong>Sociology has studied the idea of influence and has developed a number of different notions about what influence can be. </p><p class="MsoNormal">&nbsp;Influence is more than just one thing. Influence is about where you are in a network and about what flows from you to other people and from other people to you.</p><p class="MsoNormal">&nbsp;In the internet today, there is a sense that there are people who are influential and there is an effort to identify these people who are Influencers. [These are…] people who pass messages to other people and have those messages taken up at a higher rate than the average person.</p><p class="MsoNormal">&nbsp;Most people have relatively few people follow[ing] them. There are a few people who have many, many people following them. That’s one notion of influence; how many people follow you.</p><p class="MsoNormal">There are people who have many followers but, perhaps, not much influence or other kinds of power. Whereas, there are some people with relatively fewer followers, I’m thinking of Twitter at the moment, and yet have more power.</p><p class="MsoNormal">I guess the most famous example is when Justin Bieber was rated as having a higher influencer score than President Barack Obama.</p><p class="MsoNormal">&nbsp;[That is] a lopsided notion of influence. To the best of my knowledge, Mr. Bieber does not have his own nuclear arsenal, for example.</p><p class="MsoNormal">&nbsp;We probably could disagree about what Influence is. Is it that you have a lot of followers? Maybe, maybe not. It could be that people with far fewer followers occupy positions in their networks that are very, very important even though they don’t have the visibility.</p><p class="MsoNormal">In Network Theory, we think of these people as “bridges”. Bridges might have very few followers, two could be the minimum, yet those connections might be more valuable. They may be more influential because they’re the people who carry a message from one group to another.</p><p class="MsoNormal">What is Influence? The short answer is influence is not just one thing. </p><p class="MsoNormal"><strong>Randy:&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </strong>The common definition says that it’s the capacity to have an affect on someone, their character, their development or their behavior. You can affect someone in one capacity and have no effect on them on another.</p><p class="MsoNormal">&nbsp;For example is the difference between people you choose to be your friends and people you work with. Those are different influence domains. </p><p class="MsoNormal">Bryce and I have written about this. We call them “contexts” but I think we can unpack that a little more.</p><p class="MsoNormal">Could you talk a little bit about different kinds of influence?</p><p class="MsoNormal"><strong>Marc:&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </strong>That’s a very good point. Influence tends not to be uniform across topics. I may know a great deal about restaurants in my neighborhood but know very little about investments.</p><p class="MsoNormal">&nbsp;My Influence on you in terms of where you spend your Friday night might be high and where you spend your retirement might be low.</p><p class="MsoNormal">&nbsp;I think we recognize that most people have some kind of special interest. Many people become mavens or experts. I am, of course, invoking some of the lingo of Malcolm Gladwell’s Tipping Point where he talked about mavens and connectors. </p><p class="MsoNormal">I think Network Theory would have a few more categories than two. I’ll also note that Mr. Gladwell claims that there can be just a few people with this outsize influence to set a trend, to make a group of people follow some new pattern of consumption or [shift their] focus of attention.</p><p class="MsoNormal">Other researchers have actually disputed this claim. They disputed it with data. I’m thinking about the work of Duncan Watts, who is a sociologist and computer scientist now at Microsoft Research, who is suggesting that there is not just a one or a handful of influential people but rather several hundred who kick off short cascading fan-like structures – where I will tweet about something and then another 10 people will tweet about it and then 2 or 3 will follow each of them. I will have a certain amount of social media influence because of that.</p><p class="MsoNormal">The idea that there’s going to be just one or just a handful who can lead all the other people into repeating something or following something or engaging in some behavior, that seems not to be true. It was not in the data.</p><p class="MsoNormal"><strong>Randy:&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </strong>[The recent] “Arab Springs” bring to mind this [phenomenon: it was a] massively distributed [network] which had no clear center, no obvious “supernodes”.</p><p class="MsoNormal">You mentioned Gladwell and data, as we talk about influencers, [there has been a] kind of a rush to produce a reputation score as you mentioned. Justin Bieber briefly had a perfect Klout score.</p><p class="MsoNormal">The challenge with these as we’ve mentioned already is context. Beyond context, even if you can break things into useful categories for measuring influence, how actually do you measure it?</p><p class="MsoNormal"><strong>Marc:&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </strong>I think what we are probably going to find is that all measurements or some approximation are proxy for something else.</p><p class="MsoNormal">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; There is no single measurement that captures every aspect of your influence. There are perhaps a handful of network metrics, that when used in combination, do provide us with the ability to triangulate on your location within a graph.</p><p class="MsoNormal">Then I would say that it really depends on what your goal is. Different people have different [influence] value depending on what you’re trying to achieve. If you’re trying to get a new message out to a large community, you might go and look for people who are in the form of a hub there at the center of a graph.</p><p class="MsoNormal">[But] if you’re trying to get a message that’s already pretty widespread to move into a new community, you might be looking for a bridge. That person might have far fewer connections. </p><p class="MsoNormal">Network Theory allows us to calculate metrics that would capture both, a hub and a bridge. In some ways, this is like the way that geographers use latitude and longitude and elevation to locate every point uniquely on the planet.</p><p class="MsoNormal">[But social media] is not exactly [the same as] geography. Network Theory uses its own set of coordinates to try to figure out: “is this person, metaphorically, equivalent to a mountain peak or is this person really in the lowlands”? How many other mountain peaks are there? </p><p class="MsoNormal">That metaphor might work in networks. We might find that there are different locations [in networks] and the [network] metrics we would calculate have to do with that. Where are you? How much in the center of the network are you?</p><p class="MsoNormal">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; I think we’ve all had that intuition. You’ve been in a crowd or in a group. Maybe you’ve gone to a conference, you’ve been in a ballroom with a lot of people in it. People move around willy nilly. They can go wherever they like. </p><p class="MsoNormal">Most people are talking to one or two other people. [But] there in the center of the room, there’s usually one or two clumps [of people] and they’re bigger. At the center of those clumps, typically, there’s going to be somebody important. Somebody who could attract a large group around them. They tend to be rare.</p><p class="MsoNormal">In the same way, in a network, some people have these coordinates that make them the mountaintops. They tend to be rare. We can argue that they have the influence. They’re positioned in the graph in a unique way. </p><p class="MsoNormal">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; Network Theory allows us to calculate a bunch of metrics and measure who has this centrality and other attributes like: How many connections [do] they have? Whereas, [network] centrality would [represent] how unique are your connections?</p><p class="MsoNormal"><strong>Randy:&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </strong>You’ve mentioned number of connections and centrality. I’ve heard of something called Betweenness.</p><p class="MsoNormal"><strong>Marc:&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </strong>Right. That’s a flavor of centrality. Centrality comes in multiple flavors that capture some [different] aspect[s] of where you are in the graph. “Betweenness centrality” is one that is sometimes thought of as the “bridge” score.</p><p class="MsoNormal">[It is defined as a measure of] how much, if you were to be removed from the graph, would the graph be separated, as if cut off by a river?</p><p class="MsoNormal">There’s [another kind of centrality:] “eigenvector centrality” which measures not how central you are but how connected you are to people who are central.&nbsp; [It is] an interesting concept. It recognizes that being connected to people who are, themselves well connected is itself a kind of power.</p><p class="MsoNormal"><strong>Randy:&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </strong>Sometimes there’s a resource constraint on the well-connected person. There are too many people trying to get their attentions. That [alternative] contact can actually be better for you to communicate or get information [successfully].</p><p class="MsoNormal"><strong>Marc:&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </strong>Right. It’s the gatekeeper’s gatekeeper. Those people are often recognized by this metric called “eigenvector centrality”. Whereas, “betweenness centrality” often finds you the people who, were they to leave the network, would leave behind two now separated islands.</p><p class="MsoNormal"><strong>Randy:&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </strong>Thanks, Marc. That sounds like some great influence metrics we should be tracking. Let’s move into our tip section and continue the conversation.</p><p class="MsoNormal">&nbsp;For our tip, I’d like to continue the discussion on Influence with Marc Smith.</p><p class="MsoNormal">Now that we have ways of measuring and names for measurements for Influence, what do we do with it? How do we leverage this information to accomplish our ends, whether it’s to communicate to someone or provide marketing or just to even to gather their feedback?</p><p class="MsoNormal"><strong>Marc:&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </strong>A lot of attention is paid to how do you find the influencer? Our answer is you calculate network metrics and you find people who are either hubs or bridges or, in some cases, islands.</p><p class="MsoNormal">We’ll talk about [islands] probably in another episode.</p><p class="MsoNormal">What do you do when you find them? There’s a link on our show notes this episode about an article on my blog, <a href="http://www.connectedaction.net/2011/03/05/how-to-build-a-collection-of-influential-followers-in-twitter-using-social-network-analysis-and-nodexl/">How to Build a Collection of Influential Followers in Twitter Using Social Network Analysis and NodeXL</a>. It has a flow diagram. A few arrows chase each other on that diagram.</p><p class="MsoNormal"><img alt="" src="http://www.connectedaction.net/wp-content/uploads/2011/02/20110221-Twitter-Effective-Follower-Building-Process-1024x650.png"></p><p class="MsoNormal">It suggests a strategy: &nbsp;What do you do once you actually have a list of influential people? Answer: You’re going to follow them and you’re going to try to get them to repeat your message. You’re going to do that, first, by following them and then repeating their messages. That’s stage one.</p><p class="MsoNormal">Stage two is you’re going to study their messages and create messages that have some elements from their messages mixed with elements from your messages. You might use hashtags that they use. You might link to web resources that they have previously linked to. </p><p class="MsoNormal">By doing this, you are signaling to the right people the right symbols. There are often a lot of people who talk about your topic but only a few people are the mountaintops or the bridges. There are relatively few people at the center of the graph. </p><p class="MsoNormal">By choosing to focus your attention on those relatively few people more than others, you can focus your energy and have some kind of connection with them. From that connection comes the [increased] likelihood that they are going to repeat what you have been producing.</p><p class="MsoNormal">If you tweet and you have no followers, your tweet is unlikely to be heard. If you have many followers, you may still not be heard that much because your followers may not have followers. </p><p class="MsoNormal">What we want to do is find people who have, not only, many followers but have a habit of tweeting and being heard and being repeated widely across the network.</p><p class="MsoNormal"><strong>Randy:&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </strong>I think that’s the main point is to realize it’s not a simple measure of one metric. Even if you put it into a single metric, a single number like a Klout score, [or even] if you [have a score with] an appropriate tag attached. [For example:] “Randy Farmer is an expert in online reputation systems”. </p><p class="MsoNormal">[A network view of influence] is, in fact, a much more comprehensive view [because it considers] the passage of information. Who’s passing it to who and when. The important part about influence is it’s never represented by a single number or a single tag. It is a graph.</p><p class="MsoNormal">Thanks, Marc. I’m sure this is just a first of many episodes about Influence and Reputation.</p><p></p></div>
+
+    </div>
+    
+    <footer>
+        <p><strong>Subscribe:</strong> <a href="/feed.xml">RSS Feed</a> | <a href="/">All Episodes</a></p>
+        <p><em>Hosted by Randy Farmer, Scott Moore, and Marc Smith</em></p>
+    </footer>
+</body>
+</html>
